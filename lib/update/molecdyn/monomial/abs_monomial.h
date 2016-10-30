@@ -20,16 +20,16 @@ namespace Chroma
    *
    * Inexact in this case means energy computation is not supported,
    * (in an inexact algorithm sense -- obviously it is weird to have
-   * a hamiltonian where you cannot compute the energy. We may need
+   * a Hamiltonian where you cannot compute the energy. We may need
    * to think more about this)
    * 
-   * This serves the following purpose. It definees 
+   * This serves the following purpose. It defines 
    * an interface for computing the total force 
    * and can refresh the momenta,
    * 
    * 
    * We don't specify how the momenta is refreshed. It is "virtual".
-   * HMD type algorithms will porbably use gaussian noise. 
+   * HMD type algorithms will probably use Gaussian noise. 
    * GHMD type algorithms will mix the previous momenta some. How
    * to do that will be encoded in the derived class, probably 
    * through the constructor.
@@ -45,7 +45,7 @@ namespace Chroma
     //! virtual destructor:
     virtual ~Monomial() {}
 
-    //! Compute dsdq for the system... 
+    //! Compute ds/dq for the system... 
     /*! Not specified how to actually do this. s is the state, F is the computed force */
     virtual void dsdq(P& F, const AbsFieldState<P,Q>& s)  = 0;
 
