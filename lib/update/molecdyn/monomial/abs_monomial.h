@@ -46,7 +46,7 @@ namespace Chroma
     virtual ~Monomial() {}
 
     //! Compute dsdq for the system... 
-    /*! Not specified how to actually do this s is the state, F is the computed force */
+    /*! Not specified how to actually do this. s is the state, F is the computed force */
     virtual void dsdq(P& F, const AbsFieldState<P,Q>& s)  = 0;
 
     //! Refresh pseudofermion fields if any
