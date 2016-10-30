@@ -12,6 +12,11 @@
 
 namespace Chroma 
 {
+  // TODO Is there a deeper reason behind having
+  // `EvenOddPrecConstDetTwoFlavorWilsonTypeFermMonomial` and
+  // `TwoFlavorExactEvenOddPrecConstDetWilsonTypeFermMonomial` which seem to
+  // differ by `Exact` but otherwise have the order of the various terms mixed
+  // up?
 
   /*! @ingroup monomial */
   namespace EvenOddPrecConstDetTwoFlavorWilsonTypeFermMonomialEnv 
