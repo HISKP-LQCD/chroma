@@ -43,6 +43,7 @@ namespace Chroma
 
       if( monomials.size() > 0 ) { 
 	push(xml_out, "elem");
+        write(xml_out, "monomial_id", monomials[0].mon->monomial_id);
 	swatch.reset(); swatch.start();
 	monomials[0].mon->dsdq(dsdQ,s);
 	swatch.stop();
@@ -50,6 +51,7 @@ namespace Chroma
 	pop(xml_out); //elem
 	for(int i=1; i < monomials.size(); i++) { 
 	  push(xml_out, "elem");
+          write(xml_out, "monomial_id", monomials[i].mon->monomial_id);
 	  multi1d<LatticeColorMatrix> cur_F(Nd);
 	  swatch.reset(); swatch.start();
 	  monomials[i].mon->dsdq(cur_F, s);

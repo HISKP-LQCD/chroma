@@ -57,6 +57,8 @@ namespace Chroma
 
     //! Reset predictors
     virtual void resetPredictors(void) { /* Nop for most */ }
+
+    std::string monomial_id;
   };
 
 

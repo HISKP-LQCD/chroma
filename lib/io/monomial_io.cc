@@ -94,6 +94,9 @@ void readNamedMonomial(XMLReader& xml,
     
     Handle< Monomial<LCM,LCM> > mon_handle( TheMonomialFactory::Instance().createObject( monomial_name, xml, path ) );
 
+    // Let the monomial know its id.
+    mon_handle->monomial_id = monomial_id;
+
     // Here I add the handle to the named object std::map...
     TheNamedObjMap::Instance().getData< Handle< Monomial<LCM,LCM> > >(monomial_id) = mon_handle;
   }
